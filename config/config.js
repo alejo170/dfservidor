@@ -7,5 +7,5 @@ module.exports = {
     host: process.env.DB_HOST || "sql10.freesqldatabase.com",
     dialect: process.env.DB_DIALECT || "mysql",
   }
-  
+ 
 }
