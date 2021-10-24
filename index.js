@@ -5,20 +5,20 @@ const cors = require("cors");
 //const sequelize = require('./database/db');
 // const Product = require('./database/models/Product');
 //const Usuarios = require('./database/models/Usuarios');
-
+var puerto = server.listen(process.env.PORT || 3000);
 
 //middleWare
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cors());
-app.use('usuarios', require('./routes/usuarios'))
-app.use('productos', require('./routes/productos'))
+app.use('/usuarios', require('./routes/usuarios'))
+app.use('/productos', require('./routes/productos'))
 //app.use('/usuarios', require('../src/paginas/auth/routes'))
 
 const db = require("./models");
 
 db.sequelize.sync().then(() => {
-  app.listen(5000, () => {
+  app.listen(puerto, () => {
     console.log("Servidor corriendo");
   });
 });
