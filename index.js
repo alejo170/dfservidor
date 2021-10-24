@@ -5,7 +5,7 @@ const cors = require("cors");
 //const sequelize = require('./database/db');
 // const Product = require('./database/models/Product');
 //const Usuarios = require('./database/models/Usuarios');
-var puerto = server.listen(process.env.PORT || 3000);
+const puerto = process.env.PORT || 5000;
 
 //middleWare
 app.use(express.urlencoded({ extended: true }))
