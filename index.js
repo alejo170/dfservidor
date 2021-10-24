@@ -6,7 +6,7 @@ const cors = require("cors");
 // const Product = require('./database/models/Product');
 //const Usuarios = require('./database/models/Usuarios');
 const puerto = process.env.PORT || 5000;
-process.env.DATABASE_URL || sql10.freesqldatabase.com;
+
 
 //middleWare
 app.use(express.urlencoded({ extended: true }))
