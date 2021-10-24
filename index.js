@@ -5,7 +5,6 @@ const cors = require("cors");
 //const sequelize = require('./database/db');
 // const Product = require('./database/models/Product');
 //const Usuarios = require('./database/models/Usuarios');
-const puerto = process.env.PORT || 5000;
 
 
 //middleWare
@@ -18,10 +17,15 @@ app.use('/productos', require('./routes/productos'))
 
 const db = require("./models");
 
-db.sequelize.sync().then(() => {
-  app.listen(puerto, () => {
-    console.log("Servidor corriendo");
-  });
+//db.sequelize.sync().then(() => {
+//  app.listen(puerto, () => {
+//    console.log("Servidor corriendo");
+//  });
+//});
+
+const server = app.listen(process.env.PORT || 5000, () => {
+  const port = server.address().port;
+  console.log(`Express is working on port ${port}`);
 });
 
 
