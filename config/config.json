@@ -1,11 +1,11 @@
 
 {
   "development": {
-    "username": "sql10446385",
-    "password": "ceBKwdhQRW",
-    "database": "sql10446385",
-    "host": "sql10.freesqldatabase.com",
-    "dialect": "mysql"
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "",
+    "dialect": ""
   },
   "test": {
     "username": "root",
